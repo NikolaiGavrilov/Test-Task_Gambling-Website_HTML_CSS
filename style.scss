@@ -1,0 +1,127 @@
+$siteWidth: 1920px;
+$linkTextColor: rgba(255, 255, 255, 1);
+
+
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding-left: calc(50% - $siteWidth/2);
+    padding-right: calc(50% - $siteWidth/2);
+}
+
+.header {
+    background-color: rgba(17, 10, 29, 1);
+
+    &__content {
+        border: 4px solid rgba(71, 139, 249, 1);
+        border-radius: 64px 64px 64px 64px;
+        width: 1640px;
+        height: 96px;
+        margin-left: 140px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 14px;
+    }
+
+    &__button {
+        background-color: rgba(17, 10, 29, 1);
+        color: $linkTextColor;
+        border: 2px solid rgba(157, 173, 242, 1);
+        border-radius: 24px;
+        padding: 14px;
+        font-family: Lexend;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: rgba(71, 139, 249, 1);
+        }
+
+        &__language {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 8px;
+        }
+
+        &__globe-icon {
+            color: #ffffff;
+            display: block;
+        }
+    }
+
+}
+
+.header-nav {
+    padding: 30px 191px 30px 526px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    &__link {
+        color: $linkTextColor;
+        font-family: Lexend;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+    }
+}
+
+.main {
+    background-color: rgba(17, 10, 29, 1);
+
+}
+
+.main-left {
+    padding-top: 296px;
+
+    &__title {
+        font-family: Lexend;
+        font-size: 96px;
+        font-weight: 500;
+        line-height: 96px;
+        text-align: left;
+        color: rgba(71, 139, 249, 1);
+    }
+
+    &__under-title {
+        font-family: Lexend;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 32px;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &__button {
+        background-color: rgba(17, 10, 29, 1);
+        color: $linkTextColor;
+        border: 2px solid rgba(157, 173, 242, 1);
+        border-radius: 48px;
+        padding: 20px 72px;
+        font-family: Lexend;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: rgba(71, 139, 249, 1);
+        }
+    }
+}
