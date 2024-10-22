@@ -40,13 +40,16 @@
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 1s ease;
 }
 .header__button:hover {
   background-color: rgb(71, 139, 249);
+  transition: all 1s ease;
 }
 .header__button__language {
   display: flex;
   flex-direction: row;
+  align-items: center;
   flex-wrap: nowrap;
   gap: 8px;
 }
@@ -68,17 +71,21 @@
   font-weight: 400;
   line-height: 20px;
   text-align: left;
+  transition: all 1s ease;
 }
 .header-nav__link:hover {
   text-decoration: underline;
   color: rgb(71, 139, 249);
+  transition: all 1s ease;
 }
 
 .main {
   background-color: rgb(17, 10, 29);
+  position: relative;
 }
 
 .main-content {
+  width: 1920px;
   margin-left: 140px;
   display: flex;
   flex-direction: row;
@@ -87,6 +94,7 @@
 .main-left {
   padding-top: 296px;
   width: 669px;
+  z-index: 10;
 }
 .main-left__title {
   font-family: Lexend;
@@ -122,8 +130,10 @@
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 1s ease;
 }
 .main-left__button:hover {
+  transition: all 1s ease;
   background-color: rgb(71, 139, 249);
 }
 
@@ -257,7 +267,7 @@
 }
 .footer__content {
   background-color: rgb(30, 18, 49);
-  width: 1920px;
+  width: 1912px;
   height: 130px;
   border-radius: 64px 64px 0px 0px;
   border: 4px solid rgb(71, 139, 249);
@@ -304,10 +314,12 @@
   line-height: 20px;
   text-align: center;
   color: rgb(255, 255, 255);
+  transition: all 1s ease;
 }
 .footer-links__link:hover {
   text-decoration: underline;
   color: rgb(71, 139, 249);
+  transition: all 1s ease;
 }
 
 .fa {
@@ -321,8 +333,10 @@
 }
 .footer-social-media__element {
   position: relative;
+  transition: all 0.5s ease;
 }
 .footer-social-media__element:hover {
+  transition: all 0.5s ease;
   filter: brightness(150%);
 }
 .footer-social-media__flex {
@@ -333,4 +347,22 @@
   position: absolute;
   align-self: center;
   justify-self: center;
+}
+
+.bg-lights {
+  max-width: 1920px;
+  position: relative;
+}
+
+.bg-light {
+  position: absolute;
+  right: 0%;
+  top: -50px;
+  pointer-events: none;
+}
+
+.bg-light-oval {
+  position: absolute;
+  left: 0%;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */
