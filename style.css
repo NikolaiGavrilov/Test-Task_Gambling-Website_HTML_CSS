@@ -19,6 +19,10 @@
   display: none;
 }
 
+.header-mobile__menu {
+  display: none;
+}
+
 .header {
   background-color: rgb(17, 10, 29);
 }
@@ -98,7 +102,7 @@
 }
 
 .main-content {
-  width: 1920px;
+  width: 1780px;
   margin-left: 140px;
   display: flex;
   flex-direction: row;
@@ -416,17 +420,87 @@
     display: none;
   }
   .header-mobile {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
     padding: 10px 14px 10px 210px;
   }
   .header-mobile__language-button {
     padding: 8px;
-    gap: 8px;
     border-radius: 24px;
     border: 2px solid #9dadf2;
+    cursor: pointer;
   }
   .header-mobile__burger-button {
     padding: 4px;
+  }
+  .header-mobile__menu {
+    display: block;
+    transform: translateX(-150%);
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    background-color: rgb(17, 10, 29);
+    width: 100%;
+    z-index: 100;
+    transition: all 0.7s ease;
+  }
+  .header-mobile__menu.active {
+    display: block;
+    transform: translateX(0%);
+    transition: all 0.7s ease;
+  }
+  .header-mobile__link {
+    font-family: Lexend;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #ffffff;
+    border: 2px solid #478bf9;
+    padding-left: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 280px;
+    gap: 8px;
+    border-radius: 28px;
+  }
+  .header-mobile__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: left;
+    margin-bottom: 30px;
+  }
+  .header-mobile__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: left;
+    margin-bottom: 92px;
+  }
+  .header-mobile__button {
+    width: 300px;
+    background-color: #1e1231;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(157, 173, 242);
+    border-radius: 24px;
+    padding: 14px;
+    font-family: Lexend;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .header-mobile__button:hover {
+    background-color: #9dadf2;
+    transition: all 0.5s ease;
   }
   .bg-lights {
     width: 320px;

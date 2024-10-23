@@ -23,6 +23,10 @@ $linkTextColor: rgba(255, 255, 255, 1);
   display: none;
 }
 
+.header-mobile__menu {
+  display: none;
+}
+
 .header {
   background-color: rgba(17, 10, 29, 1);
 
@@ -111,7 +115,7 @@ $linkTextColor: rgba(255, 255, 255, 1);
 }
 
 .main-content {
-  width: $siteWidth;
+  width: ($siteWidth)-140px;
   margin-left: 140px;
   display: flex;
   flex-direction: row;
@@ -463,17 +467,94 @@ $linkTextColor: rgba(255, 255, 255, 1);
   }
 
   .header-mobile {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
     padding: 10px 14px 10px 210px;
 
     &__language-button {
       padding: 8px;
-      gap: 8px;
       border-radius: 24px;
       border: 2px solid #9dadf2;
+      cursor: pointer;
     }
+
     &__burger-button {
       padding: 4px;
+    }
+
+    &__menu {
+      display: block;
+      transform: translateX(-150%);
+      position: absolute;
+      top: 90px;
+      left: 0px;
+      background-color: rgba(17, 10, 29, 1);
+      width: 100%;
+      z-index: 100;
+      transition: all 0.7s ease;
+    }
+
+    &__menu.active {
+      display: block;
+      transform: translateX(0%);
+      transition: all 0.7s ease;
+    }
+
+    &__link {
+      font-family: Lexend;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #ffffff;
+      border: 2px solid #478bf9;
+      padding-left: 20px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 280px;
+      gap: 8px;
+      border-radius: 28px;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      justify-content: left;
+      margin-bottom: 30px;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      justify-content: left;
+      margin-bottom: 92px;
+    }
+    &__button {
+      width: 300px;
+      background-color: #1e1231;
+      color: $linkTextColor;
+      border: 2px solid rgba(157, 173, 242, 1);
+      border-radius: 24px;
+      padding: 14px;
+      font-family: Lexend;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      &:hover {
+        background-color: #9dadf2;
+        transition: all 0.5s ease;
+      }
     }
   }
 
